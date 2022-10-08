@@ -56,8 +56,9 @@ body{
 }
 
 #navbar li{
-   list-style: none;
-   padding: 0 20px;
+  position: relative;
+  list-style: none;
+  padding: 0 20px;
 }
 #navbar li a{
   text-decoration: none;
@@ -70,4 +71,15 @@ body{
 #navbar li a:hover,
 #navbar li a.active{
   color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
 }
